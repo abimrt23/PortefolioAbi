@@ -1,0 +1,44 @@
+body {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #ffffff;
+    width: 0 auto;
+    height: 240px;
+    display: grid;
+    margin-top: 150px;
+    margin-left: 150px;
+
+}
+
+.focus-container {
+    position: relative;
+
+}
+
+
+h1 {
+    margin-top: 10px;
+    margin-left: 10px;
+    color: #ffffff;
+    font-size: 6em;
+    filter: blur(1px); /* Applique un flou de base */
+    transition: filter 0.2s ease-out; /* Transition pour l'effet */
+    text-shadow: 
+        -1px -1px 0 #000, /* Ombre en haut à gauche */
+         1px -1px 0 #000, /* Ombre en haut à droite */
+        -1px  1px 0 #000, /* Ombre en bas à gauche */
+         1px  1px 0 #000; /* Ombre en bas à droite */
+}
+
+ p {
+    margin-bottom: 10px;
+    margin-left: 10px;
+    font-size: 5em;
+    filter: blur(1px); /* Applique un flou de base */
+    transition: filter 0.2s ease-out; /* Transition pour l'effet */
+    text-shadow: 
+        -1px -1px 0 #000, /* Ombre en haut à gauche */
+         1px -1px 0 #000, /* Ombre en haut à droite */
+        -1px  1px 0 #000, /* Ombre en bas à gauche */
+         1px  1px 0 #000; /* Ombre en bas à droite */
+}
+/* Style du cercle de mise au point */

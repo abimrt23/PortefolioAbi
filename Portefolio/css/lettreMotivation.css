@@ -1,0 +1,44 @@
+
+body {
+   background-color: #2d2d2d;
+
+}
+.terminal {
+    background-color: #2d2d2d;
+    color: #33ff33;
+    font-family: 'Courier New', Courier, monospace;
+    padding: 50px;
+    border-radius: 8px;
+    max-width: 800px;
+    margin: 0 auto;
+    white-space: pre-wrap;
+}
+
+.terminal-title {
+    text-align: center;
+    color: #33ff33;
+}
+
+/* Effet de machine à écrire */
+.terminal-effect p {
+    display: none; /* Masquer chaque paragraphe jusqu'à ce qu'il soit affiché par le script */
+    border-right: 2px solid #33ff33;
+    animation: typing As steps(20, end), blink-caret 0.75s step-end infinite;
+}
+
+.terminal-effect p.finished {
+    border-right: none; /* Supprime le curseur */
+    animation: none; /* Arrête toute animation */
+}
+
+/* Animation de machine à écrire */
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+/* Animation du curseur clignotant */
+@keyframes blink-caret {
+    100% { border-color: transparent; }
+}
+

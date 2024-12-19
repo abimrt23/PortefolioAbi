@@ -1,0 +1,154 @@
+body {
+    background-color: #1E1E1E;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body, html {
+    width: 90%;
+    height: 95%;
+    display: flex;
+    margin-left: 50px;
+    justify-content: center;
+    align-items: center;
+    background-color: #2d2d2d;
+    overflow: hidden;
+}
+
+.image-row {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+
+.image-container {
+    position: relative;
+    width: 50%; /* Chaque image prend 50% de l'écran */
+    overflow: hidden;
+    
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: filter 0.3s ease, transform 0.3s ease; /* Transition pour le flou et le zoom */
+    filter: blur(5px); /* Applique un flou de base */
+    transform: scale(1.05); /* Agrandit légèrement l'image */
+    pointer-events: none; /* Empêche les interactions avec les images */
+}
+
+/* Supprime le flou et le zoom au survol */
+.image-container:hover img {
+    filter: blur(0);
+    transform: scale(1);
+}
+
+/* Effet de clic pour enlever le flou */
+.image-container a:active img {
+    filter: blur(0);
+}
+
+.overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ffffff;
+    font-size: 2em;
+    color: white;
+    text-shadow: 
+        1px 2px 0 #1E1E1E, 
+       -1px 2px 0 #1E1E1E, 
+        1px -2px 0 #1E1E1E, 
+       -1px -2px 0 #1E1E1E; /* Ombres autour du texte pour créer la bordure */
+    font-size: 2em;
+    text-align: center;
+    padding: 20px;
+    border-radius: 8px;
+    opacity: 1;
+    z-index: 1; /* Place l'overlay devant les images */
+}
+
+/* image 1 -CV */
+
+.image-CV {
+    display: flex;
+    justify-content: center; /* Centre horizontalement */
+    align-items: center; /* Centre verticalement */
+    height: 580px;
+    
+}
+
+
+.download-btn {
+    display: inline-block;
+    padding: 12px 24px;
+    color: #fff;
+    background-color: #171616;;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 20px;
+    margin-left: 80px;
+}
+
+.download-btn:hover {
+    background-color: #505350;
+}
+
+/* image 2 -CV */
+
+.slideshow-container {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+    overflow: hidden;
+  }
+  
+  .slide {
+    display: none;
+    text-align: center;
+  }
+  
+  .slide img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .description {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+  }
+  
+  .prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 18px;
+  }
+  
+  .prev {
+    left: 0;
+  }
+  
+  .next {
+    right: 0;
+  }
+  
